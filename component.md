@@ -6,12 +6,12 @@ introdução
 Bósons são as menores unidades que irão declarar os atributos de estilo dos átomos. Esses bósons são usado como placeholders ou mixins. 
 
 Exemplo:
-bosons/main.scss
+main.scss
 
 ```scss
-@import “boson-colors”;
-@import “boson-typography”;
-@import “boson-responsive”;
+@import “boson/colors”;
+@import “boson/typography”;
+@import “boson/responsive”;
 ```
 
 
