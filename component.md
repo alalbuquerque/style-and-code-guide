@@ -8,34 +8,44 @@ Bósons são as menores unidades que irão declarar os atributos de estilo dos �
 ### Cor 
 Cores em bosons/colors.scss
 
+Exemplo:
+
 ```scss
-  %color-primary {
-    color: #FF0000;
+  %buton_config {
+    background-color: #FF0000;
   }
-  .title {
-    @extend color-primary
-   }
-   
-   /* compilado */
-   
-  .title {
-    color: #FF0000;
-   }
-   
+  button {
+    @extend %buton_config;
+  }
+```
+Compilado:
+
+```scss
+  button {
+    background-color: #FF0000;
+  }
 ```
 
 ### Typography 
 Cores em bosons/typografy.scss
 
-```scss
-  %h1 {
-    font-size: 16px;
-  }
-  .title {
-    @extend color-primary
-   }
-```
+Exemplo:
 
+```scss
+  %buton_config {
+    font-size: 1.2em;
+  }
+  button {
+    @extend %buton_config;
+  }
+```
+Compilado:
+
+```scss
+  button {
+    font-size: 1.2em;
+  }
+```
 ### Responsive
 
 
