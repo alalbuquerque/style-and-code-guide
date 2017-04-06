@@ -14,7 +14,10 @@ introdução
   
 * Não utilize classes atômicas, visuais, comportamentais e/ou utilitárias, pois não são classes semânticas e prejudicam a performance. Classes atômicas poluem o html e ainda aumentam o peso da página.
 * Trate a atomacidade no CSS
- 
+
+## Acessibilidade
+use atributos ARIA para tecnologias assistivas
+
 ## Reuso
 Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
 
