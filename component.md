@@ -3,7 +3,17 @@
 introdução
 
 ## Bósons 
-Bósons são as menores unidades que irão declarar os atributos de estilo dos átomos. Esses bósons são usado como placeholders ou mixins.
+Bósons são as menores unidades que irão declarar os atributos de estilo dos átomos. Esses bósons são usado como placeholders ou mixins. 
+
+Exemplo:
+bosons/main.scss
+
+```scss
+@import “boson-colors”;
+@import “boson-typography”;
+@import “boson-responsive”;
+```
+
 
 ### Cor 
 Cores em bosons/colors.scss
@@ -11,12 +21,37 @@ Cores em bosons/colors.scss
 Exemplo:
 
 ```scss
+  $colors: (
+    primary: #1eb7db,
+    secundary: #85c440,
+    tertiary: #a41034
+  );
+
+  @function color($color, $variant: null) {
+    @if map-has-key($colors, $color) {
+      $type: map-get($colors, $color);
+
+      @if $variant == null {
+        @if type-of($type) == map {
+          @return map-get(map-get($colors, $color), 'base');
+        } @else {
+          @return map-get($colors, $color);
+        }  
+      } @else {
+        @return map-get(map-get($colors, $color), $variant); 
+      }
+    } @else {
+      @warn 'A chave "#{$color}" não existe. Verifique se ela foi definida no mpapa "$colors"!';
+    }
+  }  
+
   %buton_config {
-    background-color: #FF0000;
+    background-color: color(primary);
   }
   button {
     @extend %buton_config;
   }
+  
 ```
 Compilado:
 
