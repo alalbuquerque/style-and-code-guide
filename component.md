@@ -105,7 +105,7 @@ Exemplo:
  }
 
  %buton_config {
-   font: font-size(big);
+   font-size: font-size(big);
  }
  button {
    @extend %buton_config;
@@ -117,7 +117,7 @@ Compilado:
 
 ```scss
   button {
-    font-size: 1.2em;
+    font-size: 18px;
   }
 ```
 ### Responsive
