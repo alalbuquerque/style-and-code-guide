@@ -15,3 +15,20 @@ introdução
 * Não utilize classes atômicas, visuais, comportamentais e/ou utilitárias, pois não são classes semânticas e prejudicam a performance. Classes atômicas poluem o html e ainda aumentam o peso da página.
 * Trate a atomacidade no CSS
  
+## Reuso
+Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
+
+## Convenções
+
+## Modificadores de Estado
+
+visível ou invisível;
+ativo ou inativo;
+habilitado ou desabilitado;
+carregando ou carregado;
+temProdutos ou semProdutos;
+vazio ou cheio.
+
+## Javascript
+## SCSS
+## Organização
