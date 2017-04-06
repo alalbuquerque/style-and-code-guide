@@ -18,12 +18,14 @@ introdução
 ## Acessibilidade
 use atributos ARIA para tecnologias assistivas
 
-## Reuso
-Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
+## Javascript
 
-## Convenções
+### Reuso
+lorem ipsum
 
-## Modificadores de Estado
+### Convenções
+
+### Modificadores de Estado
 
 visível ou invisível;
 ativo ou inativo;
@@ -32,6 +34,8 @@ carregando ou carregado;
 temProdutos ou semProdutos;
 vazio ou cheio.
 
-## Javascript
 ## SCSS
+### Reuso
+Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
+
 ## Organização
