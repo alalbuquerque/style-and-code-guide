@@ -10,14 +10,17 @@ Cores em bosons/colors.scss
 
 ```scss
   %color-primary {
-    color: #FF0000
+    color: #FF0000;
   }
   .title {
     @extend color-primary
    }
    
-   //compilado
+   /* compilado */
    
+  .title {
+    color: #FF0000;
+   }
    
 ```
 
