@@ -60,8 +60,9 @@ Exemplo:
       }
     }
   }  
-
-  %buton_config {
+  
+ // Estilizando um átomo
+  %buton_config {
     background-color: color(primary);
   }
   button {
