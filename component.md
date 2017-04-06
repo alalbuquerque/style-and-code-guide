@@ -183,33 +183,49 @@ Compilado:
 
 ```
 
-## Semântica
-* Evite o uso de div e span nos components dos elementos, tente usar elementos com definições adequadas.
-* Crie nomes intuitivos para suas classes e IDs, isso facilita na hora de realizar manutenções.  
-* Nomeie seus components e elementos com classes que possuem pelo menos duas palavras. Separe as palavras por hífen. 
-  Exemplo:
-  
+## Quarks
+Quarks são os elementos que irão ser modificados pelos bósons. E quando juntos criam um átomo, no exemplo a baixo ele separa o a tag `<button>` e o texto interno.
+Exemplo:
+
 ```html
-  <div class="card-info"></div>
+<!-- quark -->
+<button></button>
+
+<!-- quark -->
+Texto
 ```
+
+## Átomos
+Átomo é a entidade gerada a partir da união de quarks e bósons.
+
+```scss
+ %buton_config {
+   font-size: font-size(big);
+   background-color: color(primary);
+ }
  
-## Acessibilidade
-use atributos ARIA para tecnologias assistivas
+ button {
+   @extend %buton_config;
+ }
 
+```
 
-### Reuso
-lorem ipsum
+```html
+<!-- átomo -->
+<button>Texto</button>
 
-### Convenções
+```
 
-### Modificadores de Estado
+## Moléculas
+Molécula seria o a união de dois ou mais átomos:
+Exemplo: 
 
-visível ou invisível;
-ativo ou inativo;
-habilitado ou desabilitado;
-carregando ou carregado;
-temProdutos ou semProdutos;
-vazio ou cheio.
+```html
+<!-- átomo -->
+<div class="card">
+  <p class="message">lorem ipsum dolor sit amet consectetur</p>
+  <button>Texto</button>
+</div>
 
-### Reuso
-Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
+```
+
