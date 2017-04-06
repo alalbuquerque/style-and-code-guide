@@ -22,26 +22,38 @@ Exemplo:
 
 ```scss
   $colors: (
-    primary: #1eb7db,
-    secundary: #85c440,
-    tertiary: #a41034
-  );
+    primary:   #1EB7DB,
+    secondary: #85C440,
+    danger:    #F75757,
+    success:   #A4CB1B,
+    warning:   #FEBC11,
+    light: (
+      lightest: #FFFFFF,
+      light:    #F9F9F9,
+      base:     #EEEBEB,
+      medium:   #E0E0E0
+    ),
+    dark: (
+      light:   #C9C9C7,
+      base:    #706f6f,
+      medium:  #B1AFAF,
+      darkest: #000000
+    )
+  ) !default;
 
-  @function color($color, $variant: null) {
+  @function color($color, $complementary: null) {
     @if map-has-key($colors, $color) {
       $type: map-get($colors, $color);
 
-      @if $variant == null {
+      @if $complementary == null {
         @if type-of($type) == map {
           @return map-get(map-get($colors, $color), 'base');
         } @else {
           @return map-get($colors, $color);
         }  
       } @else {
-        @return map-get(map-get($colors, $color), $variant); 
+        @return map-get(map-get($colors, $color), $complementary); 
       }
-    } @else {
-      @warn 'A chave "#{$color}" não existe. Verifique se ela foi definida no mpapa "$colors"!';
     }
   }  
 
