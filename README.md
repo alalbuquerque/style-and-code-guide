@@ -16,3 +16,6 @@
 
 [Atomic Design como funciona](http://www.frontendbrasil.com.br/tutoriais/atomic-design-como-funciona/)
 
+[Brad Frost – Atomic Design – beyond tellerrand 2013](https://vimeo.com/67476280)
+
+[Pattern Lab](http://patternlab.io/)
