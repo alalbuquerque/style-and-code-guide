@@ -85,6 +85,7 @@ Exemplo:
 
 ```scss
 
+  // Mapa de font-sizes
  $font-sizes: (
    xxbig: 36px,
    xbig: 24px,
@@ -94,6 +95,7 @@ Exemplo:
    xsmall: 12px
  ) !default;
 
+  // Função de leitura de mapa
  @function font-size($value, $rem: true) {
    @if map-has-key($font-sizes, $value) {
      @if $rem {
@@ -104,6 +106,7 @@ Exemplo:
    }
  }
 
+ // Estilizando um átomo
  %buton_config {
    font-size: font-size(big);
  }
@@ -121,7 +124,64 @@ Compilado:
   }
 ```
 ### Responsive
+Cores em bosons/responsive.scss
 
+Exemplo:
+
+```scss
+
+  // Mapa de breakpoints 
+$breakpoints: (
+  small   : 641px,
+  medium  : 769px,
+  large   : 1025px,
+  xlarge  : 1321px,
+  xxlarge : 1921px
+) !default;
+
+
+ //mixin breakpoints mobile-first
+ @mixin responsive($breakpoint, $width: min) {
+   @if variable-exists(breakpoints) {
+     @if map-has-key($breakpoints, $width) {
+       @media (min-width: em(map-get($breakpoints, $breakpoint))) {
+         @media (max-width: em(map-get($breakpoints, $width) - 1)) {
+           @content;
+         }
+       }
+     } @else if $width == max {
+       @media (max-width: em(map-get($breakpoints, $breakpoint) - 1)) {
+         @content;
+       }
+     } @else {
+       @media (min-width: em(map-get($breakpoints, $breakpoint))) {
+         @content;
+       }
+     }
+   } @else {
+     @warn 'O mapa $breakpoints não existe';
+   }
+ }
+
+ button {
+   @include responsive(medium, xlarge) {
+     background: blue;
+     width: 50px;
+   }
+ }
+
+```
+Compilado:
+
+```css
+  @media (min-width: em(769px)) and (max-width: em(1320px)) {
+    button {
+      background: blue;
+      width: 50px;
+    }
+  }
+
+```
 
 ## Semântica
 * Evite o uso de div e span nos components dos elementos, tente usar elementos com definições adequadas.
