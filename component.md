@@ -21,6 +21,8 @@ Cores em bosons/colors.scss
 Exemplo:
 
 ```scss
+  // Mapa de cores com suas variáções fixas 
+  
   $colors: (
     primary:   #1EB7DB,
     secondary: #85C440,
@@ -40,8 +42,10 @@ Exemplo:
       darkest: #000000
     )
   ) !default;
-
-  @function color($color, $complementary: null) {
+  
+  // Função de leitura de mapa
+  
+  @function color($color, $complementary: null) {
     @if map-has-key($colors, $color) {
       $type: map-get($colors, $color);
 
@@ -69,7 +73,7 @@ Compilado:
 
 ```scss
   button {
-    background-color: #FF0000;
+    background-color: #1EB7DB;
   }
 ```
 
