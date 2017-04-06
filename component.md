@@ -22,7 +22,6 @@ Exemplo:
 
 ```scss
   // Mapa de cores com suas variáções fixas 
-  
   $colors: (
     primary:   #1EB7DB,
     secondary: #85C440,
@@ -43,9 +42,9 @@ Exemplo:
     )
   ) !default;
   
-  // Função de leitura de mapa
   
-  @function color($color, $complementary: null) {
+  // Função de leitura de mapa
+  @function color($color, $complementary: null) {
     @if map-has-key($colors, $color) {
       $type: map-get($colors, $color);
 
@@ -60,6 +59,7 @@ Exemplo:
       }
     }
   }  
+  
   
  // Estilizando um átomo
   %buton_config {
@@ -84,12 +84,34 @@ Cores em bosons/typografy.scss
 Exemplo:
 
 ```scss
-  %buton_config {
-    font-size: 1.2em;
-  }
-  button {
-    @extend %buton_config;
-  }
+
+ $font-sizes: (
+   xxbig: 36px,
+   xbig: 24px,
+   big: 18px,
+   medium: 16px,
+   small: 14px,
+   xsmall: 12px
+ ) !default;
+
+ @function font-size($value, $rem: true) {
+   @if map-has-key($font-sizes, $value) {
+     @if $rem {
+       @return map-get($font-sizes, $value);
+     } @else {
+       @return map-get($font-sizes, $value);
+     }
+   }
+ }
+
+ %buton_config {
+   font: font-size(big);
+ }
+ button {
+   @extend %buton_config;
+ }
+  
+
 ```
 Compilado:
 
@@ -114,7 +136,6 @@ Compilado:
 ## Acessibilidade
 use atributos ARIA para tecnologias assistivas
 
-## Javascript
 
 ### Reuso
 lorem ipsum
@@ -130,6 +151,5 @@ carregando ou carregado;
 temProdutos ou semProdutos;
 vazio ou cheio.
 
-## SCSS
 ### Reuso
 Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
