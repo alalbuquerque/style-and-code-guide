@@ -19,3 +19,5 @@
 [Brad Frost – Atomic Design – beyond tellerrand 2013](https://vimeo.com/67476280)
 
 [Pattern Lab](http://patternlab.io/)
+
+[Atomic Design - Brad Frost](http://bradfrost.com/blog/post/atomic-web-design/)
