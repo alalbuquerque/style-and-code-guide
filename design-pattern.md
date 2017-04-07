@@ -39,4 +39,7 @@ vazio ou cheio.
 Sempre que puder crie um placeholder, map, mixin ou function para otimizar alguma ação
 
 ## Organização
-[ITCSS](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/10152838/itcss-layers1.svg)
+
+
+![ITCSS](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/10152838/itcss-layers1.svg)
+<img src="https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/10152838/itcss-layers1.svg">
