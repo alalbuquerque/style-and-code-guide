@@ -80,6 +80,8 @@ Exemplo:
  // Estilizando um átomo
   %buton_config {
     background-color: color(primary);
+    color: color(secundary);
+    border-color: color(secundary);
   }
   button {
     @extend %buton_config;
