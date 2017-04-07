@@ -1,6 +1,7 @@
 # Design Pattern
 
 introdução
+
 [CSS Stats - ReclameAQUI](http://cssstats.com/stats?url=http%3A%2F%2Freclameaqui.com.br)
 
 [CSS Stats - HugMe](http://cssstats.com/stats?url=http%3A%2F%2Fapp.hugme.com.br&ua=Browser%20Default)
