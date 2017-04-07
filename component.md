@@ -158,26 +158,16 @@ $breakpoints: (
 
  //mixin breakpoints mobile-first
  @mixin responsive($breakpoint, $width: min) {
-   @if variable-exists(breakpoints) {
-     @if map-has-key($breakpoints, $width) {
-       @media (min-width: em(map-get($breakpoints, $breakpoint))) {
-         @media (max-width: em(map-get($breakpoints, $width) - 1)) {
-           @content;
-         }
-       }
-     } @else if $width == max {
-       @media (max-width: em(map-get($breakpoints, $breakpoint) - 1)) {
-         @content;
-       }
-     } @else {
-       @media (min-width: em(map-get($breakpoints, $breakpoint))) {
-         @content;
-       }
-     }
-   } @else {
-     @warn 'O mapa $breakpoints não existe';
-   }
- }
+  @if variable-exists(breakpoints) {
+    @if map-has-key($breakpoints, $width) {
+      @media (min-width: em(map-get($breakpoints, $breakpoint))) {
+        @media (max-width: em(map-get($breakpoints, $width) - 1)) {
+          @content;
+        }
+      }
+    }
+  }
+}
 
  button {
    @include responsive(medium, xlarge) {
