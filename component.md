@@ -18,6 +18,7 @@ Caso queira entrar mais afundo no assunto:
 
 [SASS + Atomic design](https://medium.com/umdevux/sass-atomic-design-59d039f946ed)
 
+[Smashing Magazine - The “Other” Interface: Atomic Design With Sass](https://www.smashingmagazine.com/2013/08/other-interface-atomic-design-sass/)
 
 ## Bósons 
 Bósons são as menores unidades que irão declarar os atributos de estilo dos átomos. Esses bósons são usado como placeholders ou mixins. 
