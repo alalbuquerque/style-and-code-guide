@@ -200,7 +200,8 @@ Compilado:
 ```
 
 ## Quarks
-Quarks são os elementos que irão ser modificados pelos bósons. E quando juntos criam um átomo, no exemplo a baixo ele separa o a tag `<button>` e o texto interno.
+Quarks são os elementos que irão ser modificados pelos bósons.
+
 Exemplo:
 
 ```scss
@@ -219,15 +220,6 @@ Exemplo:
    @extend %buton_color;
  }
 ```
-
-```html
-<!-- quark -->
-<button></button>
-
-<!-- quark -->
-Texto
-```
-
 ## Átomos
 Átomo é a entidade gerada a partir da união de quarks e bósons.
 
@@ -254,7 +246,21 @@ Molécula seria o a união de dois ou mais átomos:
 Exemplo: 
 
 ```html
-<!-- átomo -->
+<!-- molécula -->
+
+<div class="card"> <!-- quark -->
+  <input type="text"><!-- quark -->
+  <button>Texto</button> <!-- quark -->
+</div>
+
+```
+
+## Organismos
+Organismos seria o a união de dois ou mais moléculas:
+Exemplo: 
+
+```html
+<!-- molécula -->
 <div class="card">
   <p class="message">lorem ipsum dolor sit amet consectetur</p>
   <button>Texto</button>
