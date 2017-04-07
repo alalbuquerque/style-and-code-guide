@@ -1,6 +1,12 @@
-# Atomic Structure 
+# Atomic Design Structure 
 
-## Links da hora
+### [Atomic Design Pattern - Componentes](https://github.com/alalbuquerque/style-and-code-guide/blob/master/component.md)
+### [Design Pattern - Boas práticas](https://github.com/alalbuquerque/style-and-code-guide/blob/master/design-pattern.mdd)
+
+
+
+
+Links da hora:
 
 [Nomadev - Atomic Design Extended](http://nomadev.com.br/atomic-design-b%C3%B3sons-e-quarks-extended/)
 
