@@ -27,3 +27,5 @@ Links da hora:
 [Pattern Lab](http://patternlab.io/)
 
 [Atomic Design - Brad Frost](http://bradfrost.com/blog/post/atomic-web-design/)
+
+[ITCSS: SCALABLE AND MAINTAINABLE CSS ARCHITECTURE](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
