@@ -224,11 +224,13 @@ Exemplo:
 Átomo é a entidade gerada a partir da união de quarks e bósons.
 
 ```scss
+ //quark de button
  %buton_config {
-   font-size: font-size(big);
-   background-color: color(primary);
+   @extend %buton_text;
+   @extend %buton_color;
  }
  
+ //átomo de button
  button {
    @extend %buton_config;
  }
@@ -237,7 +239,7 @@ Exemplo:
 
 ```html
 <!-- átomo -->
-<button>Texto</button>
+<button>Enviar</button>
 
 ```
 
@@ -245,10 +247,62 @@ Exemplo:
 Molécula seria o a união de dois ou mais átomos:
 Exemplo: 
 
+```scss
+ //quark de button
+ %button_config {
+   @extend %button_typo;
+   @extend %button_color;
+ }
+ 
+ //quark de input
+ %input_config {
+   @extend %input_typo;
+   @extend %input_color;
+ }
+ 
+ //quark de card
+ %card_config {
+   @extend %card_color;
+ }
+ 
+ 
+//átomo de card
+.form-search {
+   @extend %card_config;
+   
+   //átomo de input
+   > input {
+     @extend %buton_config;
+   }
+ 
+   //átomo de button
+   > button {
+     @extend %button_config;
+   }
+ }
+ 
+ //compilado
+.form-search {
+  background-color: #dadada;
+}
+.form-search > input {
+  background-color: #EEEEEE;
+  color: #000000;
+  font-family: #334422;
+  font-size: 16px; 
+}
+.form-search > button {
+  background-color: #884202;
+  color: #FFFFFF;
+  font-family: #333333;
+  font-size: 18px; 
+}
+```
+
 ```html
 <!-- molécula -->
 
-<div class="card"> <!-- quark -->
+<div class="form-search"> <!-- quark -->
   <input type="text"><!-- quark -->
   <button>Texto</button> <!-- quark -->
 </div>
@@ -260,11 +314,38 @@ Organismos seria o a união de dois ou mais moléculas:
 Exemplo: 
 
 ```html
-<!-- molécula -->
-<div class="card">
-  <p class="message">lorem ipsum dolor sit amet consectetur</p>
-  <button>Texto</button>
-</div>
+<!-- organismo -->
+<header>
+  <!-- molécula -->
+  <a href="#"><img src="logo.svg" title="logo brand" role="logo"></a>
 
+  <!-- molécula -->
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+
+  <!-- molécula -->
+  <form class="header-search">
+    <input type="text" placeholder="Search">
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- molécula -->
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">Dropdown <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
 ```
 
