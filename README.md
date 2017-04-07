@@ -1,7 +1,7 @@
 # Atomic Design Structure 
 
 ### [Atomic Design Pattern - Componentes](https://github.com/alalbuquerque/style-and-code-guide/blob/master/component.md)
-### [Design Pattern - Boas práticas](https://github.com/alalbuquerque/style-and-code-guide/blob/master/design-pattern.mdd)
+### [Design Pattern - Boas práticas](https://github.com/alalbuquerque/style-and-code-guide/blob/master/design-pattern.md)
 
 
 
