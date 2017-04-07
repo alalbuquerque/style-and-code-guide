@@ -5,7 +5,6 @@ introdução
 
 [CSS Stats - HugMe](http://cssstats.com/stats?url=http%3A%2F%2Fapp.hugme.com.br&ua=Browser%20Default)
 
-[CSS Stats - Amil](http://cssstats.com/statsurl=https%3A%2F%2Famil.com.br%2Fportal%2Fweb%2Finstitucional&ua=Browser%20Default)
 
 
 ## Semântica
