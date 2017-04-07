@@ -1,6 +1,12 @@
 # Design Pattern
 
 introdução
+[CSS Stats - ReclameAQUI](http://cssstats.com/stats?url=http%3A%2F%2Freclameaqui.com.br)
+
+[CSS Stats - HugMe](http://cssstats.com/stats?url=http%3A%2F%2Fapp.hugme.com.br&ua=Browser%20Default)
+
+[CSS Stats - Amil](http://cssstats.com/statsurl=https%3A%2F%2Famil.com.br%2Fportal%2Fweb%2Finstitucional&ua=Browser%20Default)
+
 
 ## Semântica
 * Evite o uso de div e span nos components dos elementos, tente usar elementos com definições adequadas.
