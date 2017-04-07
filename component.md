@@ -20,19 +20,17 @@ Caso queira entrar mais afundo no assunto:
 
 [Smashing Magazine - The “Other” Interface: Atomic Design With Sass](https://www.smashingmagazine.com/2013/08/other-interface-atomic-design-sass/)
 
-## Bósons 
-Bósons são as menores unidades que irão declarar os atributos de estilo dos átomos. Esses bósons são usado como placeholders ou mixins. 
+## Bósons  
+Os bósons são partículas que são usados para refletir modificações em outros elementos. 
+A aplicação mais eficiente desses modificadores é a utilização de placeholders e mixins, que são extendidos nos arquivos de estilo dos atomos e quarks.
+Os bósons pode ser separados de acordo com seus objetivo:
 
 Exemplo:
-main.scss
-
 ```scss
-@import “boson/colors”;
-@import “boson/typography”;
-@import “boson/responsive”;
+@import “boson/colors.scss”; /* bósons de cores */
+@import “boson/typography.scss”; /* bósons de tipografia */
+@import “boson/responsive.scss”; /* bósons de media-queries */
 ```
-
-
 ### Cor 
 Cores em bosons/colors.scss
 
@@ -204,6 +202,23 @@ Compilado:
 ## Quarks
 Quarks são os elementos que irão ser modificados pelos bósons. E quando juntos criam um átomo, no exemplo a baixo ele separa o a tag `<button>` e o texto interno.
 Exemplo:
+
+```scss
+ //bóson de tipografia
+ %buton_text {
+   font-size: font-size(big);
+ }
+ //bóson de cor
+ %buton_color {
+   background-color: color(primary);
+ }
+ 
+ //quark de button
+ button {
+   @extend %buton_text;
+   @extend %buton_color;
+ }
+```
 
 ```html
 <!-- quark -->
