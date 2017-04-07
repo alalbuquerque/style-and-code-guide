@@ -6,7 +6,7 @@ Sua ideia inicial é segmentar os arquivos de estilos do projeto organizando de 
 
 ![Fluxo atomico](http://www.marijazaric.com/wp-content/uploads/2016/08/atomic-web-design-1.gif)
 
-Caso queira entras mais afundo no assunto:
+Caso queira entrar mais afundo no assunto:
 
 [Blog do Brad Frost - Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)
 
