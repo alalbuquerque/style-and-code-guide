@@ -1,6 +1,8 @@
 # Atomic Design Pattern - Componentes
 
-introdução
+O Atomic Design foi criado por Brad Frost no qual sua proposta é a escabilidade do desenvolvimento de software. Desenvolvido usando analogias científicas e ferramentas de guia de estilo, seu uso é indicado para sistemas nos quais são necessários reusos de componentes.
+
+Sua ideia inicial é segmentar os arquivos de estilos do projeto dentro 
 
 ## Bósons 
 Bósons são as menores unidades que irão declarar os atributos de estilo dos átomos. Esses bósons são usado como placeholders ou mixins. 
