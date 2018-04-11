@@ -8,3 +8,10 @@ Let’s prepare the environment:
 ```sh
 $  npm install -g yarn
 ```
+After install yarn global, we gonna use [yarn create](https://yarnpkg.com/lang/en/docs/cli/create/) to bring create-react-app with yarn 
+
+```sh
+$  yarn create react-app my-app
+$  cd my-app/
+$ yarn start
+```
